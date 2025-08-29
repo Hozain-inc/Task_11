@@ -33,3 +33,13 @@ while True:
 
 
     file_ops.save_participant(csv_file,  participant_dic)
+    # file_ops.load_participants(csv_file)
+
+    def load_participants(file_path):
+    file = Path(file_path)
+    if not file.exists():
+        print("file does not exist")
+    else:
+        print(f"Loading participants from {file.name}")
+        with open(file, mode="r", newline="", encoding="utf-8") as f:
+            print(f.read())
